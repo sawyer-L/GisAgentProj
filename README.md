@@ -22,10 +22,15 @@
 
 ## Screenshots
 
-| 3D Pipeline Visualization | AI Analysis Result |
-|:-------------------------:|:------------------:|
-| ![System Overview](docs/system_display.png) | ![AI Analysis](docs/ai_result_display.png) |
-| *3D terrain, buildings, underground pipe network with glow* | *GIS AI analysis report and risk assessment* |
+| 3D Pipeline Visualization |
+|:-------------------------:
+| ![System Overview](docs/system_display.png) |
+| *3D terrain, buildings, underground pipe network with glow* |
+
+| AI Analysis Result |
+|:------------------:|
+| ![AI Analysis](docs/ai_result_display.png) |
+| *GIS AI analysis report and risk assessment* |
 
 ## Architecture
 
