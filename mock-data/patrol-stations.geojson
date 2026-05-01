@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "巡检站点 A",
+        "team": "Alpha"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.414, 39.911]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "巡检站点 B",
+        "team": "Beta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.367, 39.901]
+      }
+    }
+  ]
+}

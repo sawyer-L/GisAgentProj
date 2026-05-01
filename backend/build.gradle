@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.2'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.gisagentproj'
+version = '0.1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-database-postgresql'
+    implementation 'org.postgresql:postgresql'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'org.locationtech.jts:jts-core:1.19.0'
+    implementation 'io.hypersistence:hypersistence-utils-hibernate-63:3.7.3'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+bootRun {
+    systemProperties = System.properties
+    if (System.getenv('AI_API_KEY')) {
+        environment 'AI_API_KEY', System.getenv('AI_API_KEY')
+    }
+    if (System.getenv('AI_BASE_URL')) {
+        environment 'AI_BASE_URL', System.getenv('AI_BASE_URL')
+    }
+}

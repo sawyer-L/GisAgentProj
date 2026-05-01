@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "西北排水节点",
+        "priority": "high",
+        "category": "drainage-risk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.377, 39.919]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "河道堤岸传感器",
+        "priority": "medium",
+        "category": "sensor-alert"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.405, 39.898]
+      }
+    }
+  ]
+}

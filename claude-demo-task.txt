@@ -1,0 +1,7 @@
+﻿Demo task for the visible Claude Code terminal:
+
+1. Create the file 'C:\Users\Administrator.DESKTOP-KDKOE48\Desktop\text2.txt'
+2. Put exactly this content into the file:
+hello from claude code
+3. Verify the file exists
+4. Report the result

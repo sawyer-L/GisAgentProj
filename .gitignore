@@ -1,0 +1,42 @@
+# Dependencies
+frontend/node_modules/
+backend/.gradle/
+backend/build/
+
+# Build output
+frontend/dist/
+frontend/.vite/
+
+# Environment / secrets
+.env
+*.env.local
+*.env.*.local
+mimo_api.txt
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Claude Code local
+.codex/
+.claude/
+
+# Gradle wrapper jar (regenerate with `gradle wrapper`)
+# backend/gradle/wrapper/gradle-wrapper.jar
+
+# Temporary
+*.tmp
+*.bak

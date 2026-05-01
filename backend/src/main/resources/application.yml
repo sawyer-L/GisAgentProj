@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: gis-agent-backend
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+      - org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+
+server:
+  port: 8081
+
+ai:
+  provider:
+    base-url: ${AI_BASE_URL:https://api.xiaomimimo.com/anthropic}
+    api-key: ${AI_API_KEY:}
+    model: ${AI_MODEL:mimo-v2.5-pro}
+    max-tokens: ${AI_MAX_TOKENS:1024}
+    timeout-ms: ${AI_TIMEOUT_MS:30000}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: db
+  autoconfigure:
+    exclude: []
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/gis_agent}
+    username: ${DB_USER:gis_agent}
+    password: ${DB_PASS:}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true

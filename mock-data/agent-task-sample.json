@@ -1,0 +1,28 @@
+{
+  "taskId": "task-demo-001",
+  "taskType": "spatial-risk-summary",
+  "selectedFeature": "滨河泵站",
+  "radiusKm": 3,
+  "steps": [
+    {
+      "id": "collect",
+      "title": "收集地图上下文",
+      "status": "done"
+    },
+    {
+      "id": "query",
+      "title": "执行 GIS 查询",
+      "status": "done"
+    },
+    {
+      "id": "reason",
+      "title": "生成分析结论",
+      "status": "running"
+    }
+  ],
+  "result": {
+    "summary": "当前站点周边存在 2 个风险点与 1 个可用巡检站点。",
+    "highlights": ["西北排水节点", "河道堤岸传感器", "巡检站点 A"],
+    "recommendation": "建议先前往西北排水节点，再顺路检查河道堤岸传感器。"
+  }
+}
