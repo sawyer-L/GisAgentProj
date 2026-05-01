@@ -20,6 +20,13 @@
 - **Multi-Agent Workflow** — Planner, GIS Analyst, and Report Agent collaborate in sequence
 - **Task History** — Analysis results auto-saved with snapshot replay
 
+## Screenshots
+
+| 3D Pipeline Visualization | AI Analysis Result |
+|:-------------------------:|:------------------:|
+| ![System Overview](docs/system_display.png) | ![AI Analysis](docs/ai_result_display.png) |
+| *3D terrain, buildings, underground pipe network with glow* | *GIS AI analysis report and risk assessment* |
+
 ## Architecture
 
 ```
