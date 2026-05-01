@@ -89,14 +89,14 @@ public class AiGatewayService {
                 .body(AnthropicResponse.class);
 
             if (response != null && response.content() != null && !response.content().isEmpty()) {
-                return response.content().get(0).text();
+                return response.content().get(0).effectiveText();
             }
 
             log.warn("Empty AI response, falling back to mock");
             return "AI response unavailable.";
         } catch (Exception e) {
-            log.error("AI call failed: {}", e.getMessage());
-            return "AI call failed: " + e.getMessage();
+            log.error("AI call failed: {} ({})", e.getClass().getName(), e.getMessage(), e);
+            return "AI call failed: " + e.getClass().getSimpleName() + " - " + e.getMessage();
         }
     }
 
@@ -121,14 +121,14 @@ public class AiGatewayService {
                 .body(AnthropicResponse.class);
 
             if (response != null && response.content() != null && !response.content().isEmpty()) {
-                return response.content().get(0).text();
+                return response.content().get(0).effectiveText();
             }
 
             log.warn("Empty AI response");
             return "AI 响应为空。";
         } catch (Exception e) {
-            log.error("AI call failed: {}", e.getMessage());
-            return "AI 调用失败: " + e.getMessage();
+            log.error("AI call failed: {} ({})", e.getClass().getName(), e.getMessage(), e);
+            return "AI 调用失败: " + e.getClass().getSimpleName() + " - " + e.getMessage();
         }
     }
 
@@ -153,6 +153,11 @@ public class AiGatewayService {
 
     record ContentBlock(
         String type,
-        String text
-    ) {}
+        String text,
+        String thinking
+    ) {
+        String effectiveText() {
+            return text != null ? text : thinking;
+        }
+    }
 }

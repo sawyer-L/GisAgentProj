@@ -4,13 +4,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "ai.provider")
+@ConfigurationProperties(prefix = "ai")
 public class AiProviderConfig {
 
     private String baseUrl = "https://api.xiaomimimo.com/anthropic";
     private String apiKey = "";
     private String model = "mimo-v2.5-pro";
-    private int maxTokens = 1024;
+    private int maxTokens = 8192;
     private int timeoutMs = 30000;
 
     public String getBaseUrl() {
