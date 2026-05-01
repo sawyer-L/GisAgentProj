@@ -181,6 +181,12 @@ async function initScene() {
   bindSelection();
   refreshEntityVisibility();
   refreshEntityStyles();
+
+  // Force Cesium to recalculate canvas size after DOM layout
+  requestAnimationFrame(() => {
+    viewer?.resize();
+  });
+
   console.log("[MapCanvas] Scene init complete");
   void store.runAnalysis();
 }

@@ -52,7 +52,7 @@ input {
 .workspace-shell {
   display: grid;
   height: 100vh;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto 1fr;
   gap: 10px;
   padding: 10px 14px;
   overflow: hidden;
@@ -71,15 +71,11 @@ input {
 }
 
 .capability-strip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  display: none;
 }
 
 .status-rail {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  display: none;
 }
 
 .topbar,
@@ -448,7 +444,7 @@ input {
   display: grid;
   gap: 8px;
   min-height: 0;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto minmax(450px, 1fr);
   overflow: hidden;
 }
 
@@ -558,8 +554,8 @@ input {
 
 .map-canvas {
   width: 100%;
-  height: 100%;
-  min-height: 300px;
+  height: 450px;
+  min-height: 450px;
 }
 
 .prompt-card textarea {
