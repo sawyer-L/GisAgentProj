@@ -1,4 +1,4 @@
-# Smart Pipeline Operations Platform
+# Multi-Agent GIS Analysis Platform
 
 [![Vue](https://img.shields.io/badge/Vue-3-42b883?logo=vue.js)](https://vuejs.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4-6db33f?logo=spring-boot)](https://spring.io/projects/spring-boot)
